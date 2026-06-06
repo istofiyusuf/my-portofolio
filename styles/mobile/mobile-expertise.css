@@ -1,0 +1,155 @@
+/* ============================================
+   MOBILE EXPERTISE - Apple HIG Premium
+   ============================================ */
+
+.mobile-expertise {
+  padding: 60px 20px;
+  background: #f5f5f7;
+}
+
+.dark .mobile-expertise {
+  background: #1c1c1e;
+}
+
+.mobile-expertise-container {
+  width: 100%;
+}
+
+.mobile-expertise-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.mobile-expertise-badge {
+  display: inline-block;
+  font-family: -apple-system, "SF Pro Text", system-ui;
+  font-size: 12px;
+  font-weight: 510;
+  color: #007aff;
+  background: rgba(0, 122, 255, 0.1);
+  padding: 4px 12px;
+  border-radius: 980px;
+  margin-bottom: 16px;
+}
+
+.mobile-expertise-title {
+  font-family: -apple-system, "SF Pro Display", system-ui;
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: -0.003em;
+  margin-bottom: 12px;
+  color: #1d1d1f;
+}
+
+.dark .mobile-expertise-title {
+  color: #f5f5f7;
+}
+
+.mobile-expertise-subtitle {
+  font-family: -apple-system, "SF Pro Text", system-ui;
+  font-size: 15px;
+  color: #6e6e73;
+}
+
+.dark .mobile-expertise-subtitle {
+  color: #8e8e93;
+}
+
+/* List */
+.mobile-expertise-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Card */
+.mobile-expertise-card {
+  display: flex;
+  gap: 16px;
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 18px;
+  transition: all 0.3s ease;
+  animation: fadeInUp 0.5s ease forwards;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.dark .mobile-expertise-card {
+  background: #2c2c2e;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.mobile-card-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.mobile-card-icon span {
+  font-size: 24px;
+}
+
+.mobile-card-content {
+  flex: 1;
+}
+
+.mobile-card-title {
+  font-family: -apple-system, "SF Pro Display", system-ui;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #1d1d1f;
+}
+
+.dark .mobile-card-title {
+  color: #f5f5f7;
+}
+
+.mobile-card-description {
+  font-family: -apple-system, "SF Pro Text", system-ui;
+  font-size: 13px;
+  line-height: 1.4;
+  color: #6e6e73;
+  margin-bottom: 10px;
+}
+
+.dark .mobile-card-description {
+  color: #8e8e93;
+}
+
+.mobile-card-techs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.mobile-tech-tag {
+  font-family: -apple-system, "SF Pro Text", system-ui;
+  font-size: 10px;
+  font-weight: 470;
+  color: #007aff;
+  background: rgba(0, 122, 255, 0.08);
+  padding: 3px 8px;
+  border-radius: 980px;
+}
+
+/* Mobile icon styling */
+.mobile-card-icon svg {
+  transition: transform 0.2s ease;
+}
+
+.mobile-expertise-card:active .mobile-card-icon svg {
+  transform: scale(0.95);
+}

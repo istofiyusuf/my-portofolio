@@ -1,0 +1,276 @@
+/* ============================================
+   MOBILE CONTACT - Apple HIG Premium
+   ============================================ */
+
+.mobile-contact {
+  padding: 60px 20px;
+  background: #ffffff;
+}
+
+.dark .mobile-contact {
+  background: #000000;
+}
+
+.mobile-contact-container {
+  width: 100%;
+}
+
+/* Header */
+.mobile-contact-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.mobile-contact-badge {
+  display: inline-block;
+  font-family: -apple-system, "SF Pro Text", system-ui;
+  font-size: 12px;
+  font-weight: 510;
+  color: #007aff;
+  background: rgba(0, 122, 255, 0.1);
+  padding: 4px 12px;
+  border-radius: 980px;
+  margin-bottom: 12px;
+}
+
+.mobile-contact-title {
+  font-family: -apple-system, "SF Pro Display", system-ui;
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: -0.003em;
+  color: #1d1d1f;
+}
+
+.dark .mobile-contact-title {
+  color: #f5f5f7;
+}
+
+/* Info Card */
+.mobile-contact-info {
+  background: #f5f5f7;
+  border-radius: 24px;
+  padding: 24px;
+  margin-bottom: 20px;
+}
+
+.dark .mobile-contact-info {
+  background: #1c1c1e;
+}
+
+.mobile-contact-info-text {
+  font-family: -apple-system, "SF Pro Text", system-ui;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #6e6e73;
+  margin-bottom: 24px;
+}
+
+.dark .mobile-contact-info-text {
+  color: #8e8e93;
+}
+
+/* Contact Details */
+.mobile-contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 24px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.dark .mobile-contact-details {
+  border-bottom-color: rgba(255, 255, 255, 0.06);
+}
+
+.mobile-contact-detail {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.mobile-contact-detail svg {
+  color: #007aff;
+  flex-shrink: 0;
+}
+
+.mobile-contact-detail div {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.mobile-contact-detail span {
+  font-family: -apple-system, "SF Pro Text", system-ui;
+  font-size: 11px;
+  font-weight: 500;
+  color: #8e8e93;
+}
+
+.mobile-contact-detail a,
+.mobile-contact-detail p {
+  font-family: -apple-system, "SF Pro Text", system-ui;
+  font-size: 14px;
+  font-weight: 500;
+  color: #1d1d1f;
+  text-decoration: none;
+}
+
+.dark .mobile-contact-detail a,
+.dark .mobile-contact-detail p {
+  color: #f5f5f7;
+}
+
+.mobile-contact-detail .available {
+  color: #34c759;
+}
+
+/* Social */
+.mobile-contact-social {
+  text-align: center;
+}
+
+.mobile-contact-social p {
+  font-family: -apple-system, "SF Pro Text", system-ui;
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: 12px;
+  color: #1d1d1f;
+}
+
+.dark .mobile-contact-social p {
+  color: #f5f5f7;
+}
+
+.mobile-contact-social-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+.mobile-contact-social-links a {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #1d1d1f;
+  transition: all 0.2s ease;
+}
+
+.dark .mobile-contact-social-links a {
+  background: rgba(255, 255, 255, 0.08);
+  color: #f5f5f7;
+}
+
+.mobile-contact-social-links a:active {
+  transform: scale(0.94);
+}
+
+/* Form */
+.mobile-contact-form {
+  background: #f5f5f7;
+  border-radius: 24px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.dark .mobile-contact-form {
+  background: #1c1c1e;
+}
+
+.mobile-form-group input,
+.mobile-form-group textarea {
+  width: 100%;
+  font-family: -apple-system, "SF Pro Text", system-ui;
+  font-size: 15px;
+  padding: 14px 16px;
+  background: #ffffff;
+  border: 1px solid transparent;
+  border-radius: 14px;
+  outline: none;
+  color: #1d1d1f;
+}
+
+.dark .mobile-form-group input,
+.dark .mobile-form-group textarea {
+  background: #2c2c2e;
+  color: #f5f5f7;
+}
+
+.mobile-form-group input:focus,
+.mobile-form-group textarea:focus {
+  border-color: #007aff;
+}
+
+.mobile-form-group textarea {
+  resize: vertical;
+}
+
+/* Submit Button */
+.mobile-contact-submit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: #007aff;
+  color: white;
+  font-family: -apple-system, "SF Pro Text", system-ui;
+  font-size: 16px;
+  font-weight: 590;
+  padding: 14px 20px;
+  border: none;
+  border-radius: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-top: 8px;
+}
+
+.mobile-contact-submit:active {
+  transform: scale(0.98);
+  background: #0066d4;
+}
+
+.mobile-contact-submit:disabled {
+  opacity: 0.7;
+}
+
+/* Success Message */
+.mobile-form-success {
+  margin-top: 8px;
+  padding: 12px;
+  background: rgba(52, 199, 89, 0.1);
+  border-radius: 12px;
+  color: #34c759;
+  font-family: -apple-system, "SF Pro Text", system-ui;
+  font-size: 12px;
+  text-align: center;
+}
+
+/* Status Messages Mobile */
+.mobile-form-success {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 12px;
+  padding: 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  text-align: center;
+}
+
+.mobile-form-success.success {
+  background: rgba(52, 199, 89, 0.1);
+  color: #34c759;
+}
+
+.mobile-form-success.error {
+  background: rgba(255, 59, 48, 0.1);
+  color: #ff3b30;
+}

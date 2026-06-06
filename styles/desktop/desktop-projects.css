@@ -1,0 +1,658 @@
+/* ============================================
+   DESKTOP PROJECTS - Apple HIG Premium
+   ============================================ */
+
+.desktop-projects {
+  position: relative;
+  padding: 100px 32px;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+.dark .desktop-projects {
+  background: #000000;
+}
+
+.projects-bg-blur {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(
+    circle,
+    rgba(0, 122, 255, 0.04) 0%,
+    transparent 70%
+  );
+  bottom: -200px;
+  left: -200px;
+  pointer-events: none;
+}
+
+.projects-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+/* ========== HEADER ========== */
+.projects-header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.projects-badge {
+  display: inline-block;
+  font-family: -apple-system, "SF Pro Text", system-ui;
+  font-size: 13px;
+  font-weight: 510;
+  color: #007aff;
+  background: rgba(0, 122, 255, 0.1);
+  padding: 5px 14px;
+  border-radius: 980px;
+  margin-bottom: 20px;
+}
+
+.projects-title {
+  font-family: -apple-system, "SF Pro Display", system-ui;
+  font-size: 48px;
+  font-weight: 700;
+  letter-spacing: -0.003em;
+  margin-bottom: 16px;
+  color: #1d1d1f;
+}
+
+.dark .projects-title {
+  color: #f5f5f7;
+}
+
+.title-dot {
+  color: #007aff;
+}
+
+.projects-subtitle {
+  font-family: -apple-system, "SF Pro Text", system-ui;
+  font-size: 18px;
+  color: #6e6e73;
+}
+
+.dark .projects-subtitle {
+  color: #8e8e93;
+}
+
+/* ========== FILTERS ========== */
+.projects-filters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 48px;
+}
+
+.filter-btn {
+  font-family: -apple-system, "SF Pro Text", system-ui;
+  font-size: 14px;
+  font-weight: 470;
+  padding: 8px 18px;
+  background: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 980px;
+  color: #1d1d1f;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.dark .filter-btn {
+  border-color: rgba(255, 255, 255, 0.1);
+  color: #f5f5f7;
+}
+
+.filter-btn:hover {
+  background: rgba(0, 122, 255, 0.05);
+  border-color: #007aff;
+}
+
+.filter-btn.active {
+  background: #007aff;
+  border-color: #007aff;
+  color: white;
+}
+
+/* ========== GRID ========== */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+/* ========== CARD ========== */
+.project-card {
+  opacity: 0;
+  animation: cardFadeIn 0.6s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+  cursor: pointer;
+}
+
+@keyframes cardFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.project-card-inner {
+  background: #ffffff;
+  border-radius: 24px;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.dark .project-card-inner {
+  background: #1c1c1e;
+  box-shadow: none;
+}
+
+.project-card-inner:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.2);
+}
+
+/* ========== CARD IMAGE ========== */
+.project-image-wrapper {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+}
+
+.project-image-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #f0f0f0;
+}
+
+.dark .project-image-container {
+  background: #2c2c2e;
+}
+
+.project-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.project-card-inner:hover .project-image {
+  transform: scale(1.05);
+}
+
+/* Placeholder ketika gambar error */
+.project-image-placeholder {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  transition: transform 0.5s ease;
+}
+
+.project-card-inner:hover .project-image-placeholder {
+  transform: scale(1.05);
+}
+
+.placeholder-text {
+  font-family: -apple-system, "SF Pro Text", system-ui;
+  font-size: 18px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.8);
+  letter-spacing: -0.3px;
+}
+
+/* Status Badge */
+.project-status-badge {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(10px);
+  border-radius: 980px;
+  font-family: -apple-system, "SF Pro Text", system-ui;
+  font-size: 12px;
+  font-weight: 500;
+  color: white;
+  z-index: 5;
+}
+
+.project-status-badge[data-status="live"] {
+  background: rgba(52, 199, 89, 0.9);
+}
+.project-status-badge[data-status="coming-soon"] {
+  background: rgba(255, 159, 10, 0.9);
+}
+.project-status-badge[data-status="maintenance"] {
+  background: rgba(255, 59, 48, 0.9);
+}
+
+/* ========== CARD CONTENT ========== */
+.project-content {
+  padding: 20px;
+}
+
+.project-title {
+  font-family: -apple-system, "SF Pro Display", system-ui;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #1d1d1f;
+}
+
+.dark .project-title {
+  color: #f5f5f7;
+}
+
+.project-description {
+  font-family: -apple-system, "SF Pro Text", system-ui;
+  font-size: 14px;
+  line-height: 1.4;
+  color: #6e6e73;
+  margin-bottom: 16px;
+}
+
+.dark .project-description {
+  color: #8e8e93;
+}
+
+/* Tech Tags */
+.project-techs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.project-tech {
+  font-family: -apple-system, "SF Pro Text", system-ui;
+  font-size: 11px;
+  font-weight: 470;
+  color: #007aff;
+  background: rgba(0, 122, 255, 0.08);
+  padding: 4px 10px;
+  border-radius: 980px;
+}
+
+/* Links */
+.project-links {
+  display: flex;
+  gap: 12px;
+}
+
+.project-link {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: -apple-system, "SF Pro Text", system-ui;
+  font-size: 13px;
+  font-weight: 500;
+  color: #007aff;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.project-link:hover {
+  opacity: 0.7;
+}
+
+/* ========== MODAL - FIX SCROLL & SIZE ========== */
+.project-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(12px);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  /* PENTING: prevent scroll di background */
+  overflow: hidden;
+}
+
+/* Modal Container */
+.project-modal {
+  position: relative;
+  max-width: 560px;
+  width: 100%;
+  max-height: 85vh;
+  background: #ffffff;
+  border-radius: 20px; /* Kurangi dari 32px */
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  animation: modalSlideUp 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.dark .project-modal {
+  background: #1c1c1e;
+}
+
+@keyframes modalSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Tombol Close - Lebih kecil & elegan */
+.modal-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  border: none;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 20;
+  font-size: 20px;
+  transition: all 0.2s ease;
+}
+
+.modal-close:hover {
+  background: rgba(0, 0, 0, 0.7);
+  transform: scale(1.05);
+}
+
+/* ========== MODAL IMAGE - LEBIH KECIL ========== */
+.modal-image-container {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9; /* Lebih pendek dari 16/10 */
+  overflow: hidden;
+  flex-shrink: 0;
+  background: #f0f0f0;
+}
+
+.modal-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Status Badge di Modal - Lebih kecil */
+.modal-status-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 10px;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(8px);
+  border-radius: 980px;
+  font-family: -apple-system, "SF Pro Text", system-ui;
+  font-size: 11px;
+  font-weight: 500;
+  color: white;
+  z-index: 10;
+}
+
+.modal-status-badge[data-status="live"] {
+  background: rgba(52, 199, 89, 0.9);
+}
+.modal-status-badge[data-status="coming-soon"] {
+  background: rgba(255, 159, 10, 0.9);
+}
+.modal-status-badge[data-status="maintenance"] {
+  background: rgba(255, 59, 48, 0.9);
+}
+
+/* ========== MODAL CONTENT - SCROLLABLE ========== */
+.modal-content {
+  padding: 20px 24px;
+  overflow-y: auto;
+  flex: 1;
+  /* PENTING: biar scroll di dalam modal */
+  max-height: calc(85vh - 200px);
+}
+
+/* Custom Scrollbar - Halus */
+.modal-content::-webkit-scrollbar {
+  width: 4px;
+}
+
+.modal-content::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+.dark .modal-content::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.dark .modal-content::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Modal Header - Lebih ringkas */
+.modal-header-custom {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.dark .modal-header-custom {
+  border-bottom-color: rgba(255, 255, 255, 0.06);
+}
+
+.modal-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px; /* Kurangi radius */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.modal-title {
+  font-family: -apple-system, "SF Pro Display", system-ui;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: -0.003em;
+  margin-bottom: 2px;
+  color: #1d1d1f;
+}
+
+.dark .modal-title {
+  color: #f5f5f7;
+}
+
+.modal-tagline {
+  font-family: -apple-system, "SF Pro Text", system-ui;
+  font-size: 12px;
+  color: #6e6e73;
+}
+
+.dark .modal-tagline {
+  color: #8e8e93;
+}
+
+/* Modal Body Sections - Lebih rapat */
+.modal-body {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.modal-section h3 {
+  font-family: -apple-system, "SF Pro Text", system-ui;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #1d1d1f;
+}
+
+.dark .modal-section h3 {
+  color: #f5f5f7;
+}
+
+.modal-section p {
+  font-family: -apple-system, "SF Pro Text", system-ui;
+  font-size: 12px;
+  line-height: 1.45;
+  color: #6e6e73;
+}
+
+.dark .modal-section p {
+  color: #8e8e93;
+}
+
+/* Features List - Grid 2 kolom lebih kecil */
+.modal-features {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 6px;
+}
+
+.modal-features li {
+  font-family: -apple-system, "SF Pro Text", system-ui;
+  font-size: 11px;
+  color: #6e6e73;
+  padding-left: 18px;
+  position: relative;
+  line-height: 1.4;
+}
+
+.dark .modal-features li {
+  color: #8e8e93;
+}
+
+.modal-features li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #34c759;
+  font-weight: 600;
+  font-size: 10px;
+}
+
+/* Tech Tags - Lebih kecil */
+.modal-techs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.modal-tech {
+  font-family: -apple-system, "SF Pro Text", system-ui;
+  font-size: 10px;
+  font-weight: 470;
+  color: #007aff;
+  background: rgba(0, 122, 255, 0.08);
+  padding: 3px 8px;
+  border-radius: 980px;
+}
+
+/* Modal Links */
+.modal-links {
+  display: flex;
+  gap: 10px;
+  margin-top: 8px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.dark .modal-links {
+  border-top-color: rgba(255, 255, 255, 0.06);
+}
+
+.modal-link-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #007aff;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 980px;
+  text-decoration: none;
+  font-family: -apple-system, "SF Pro Text", system-ui;
+  font-size: 12px;
+  font-weight: 590;
+  transition: all 0.2s ease;
+}
+
+.modal-link-primary:hover {
+  background: #0066d4;
+  transform: scale(0.98);
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 640px) {
+  .project-modal-overlay {
+    padding: 16px;
+  }
+
+  .project-modal {
+    max-width: 100%;
+    max-height: 90vh;
+    border-radius: 16px;
+  }
+
+  .modal-content {
+    padding: 16px 20px;
+    max-height: calc(90vh - 180px);
+  }
+
+  .modal-features {
+    grid-template-columns: 1fr;
+  }
+
+  .modal-header-custom {
+    gap: 10px;
+  }
+
+  .modal-title {
+    font-size: 18px;
+  }
+
+  .modal-icon {
+    width: 38px;
+    height: 38px;
+  }
+}

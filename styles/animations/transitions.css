@@ -1,0 +1,175 @@
+/* styles/animations/transitions.css - Apple Animations */
+@keyframes apple-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes apple-scale-in {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes apple-slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes apple-slide-down {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes apple-slide-left {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes apple-slide-right {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes apple-pulse {
+  0%,
+  100% {
+    opacity: 0.4;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(1.05);
+  }
+}
+
+@keyframes apple-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes apple-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes apple-shimmer {
+  0% {
+    background-position: -100% 0;
+  }
+  100% {
+    background-position: 100% 0;
+  }
+}
+
+/* Animation Classes */
+.apple-animate-fade-in {
+  animation: apple-fade-in 0.5s var(--transition-base) forwards;
+}
+
+.apple-animate-scale-in {
+  animation: apple-scale-in 0.4s var(--transition-base) forwards;
+}
+
+.apple-animate-slide-up {
+  animation: apple-slide-up 0.6s var(--transition-base) forwards;
+}
+
+.apple-animate-slide-down {
+  animation: apple-slide-down 0.6s var(--transition-base) forwards;
+}
+
+.apple-animate-slide-left {
+  animation: apple-slide-left 0.6s var(--transition-base) forwards;
+}
+
+.apple-animate-slide-right {
+  animation: apple-slide-right 0.6s var(--transition-base) forwards;
+}
+
+.apple-animate-pulse {
+  animation: apple-pulse 2s ease-in-out infinite;
+}
+
+.apple-animate-float {
+  animation: apple-float 4s ease-in-out infinite;
+}
+
+.apple-animate-spin {
+  animation: apple-spin 1s linear infinite;
+}
+
+/* Stagger children */
+.apple-stagger-children > * {
+  opacity: 0;
+  animation: apple-slide-up 0.5s var(--transition-base) forwards;
+}
+
+.apple-stagger-children > *:nth-child(1) {
+  animation-delay: 0s;
+}
+.apple-stagger-children > *:nth-child(2) {
+  animation-delay: 0.1s;
+}
+.apple-stagger-children > *:nth-child(3) {
+  animation-delay: 0.2s;
+}
+.apple-stagger-children > *:nth-child(4) {
+  animation-delay: 0.3s;
+}
+.apple-stagger-children > *:nth-child(5) {
+  animation-delay: 0.4s;
+}
+
+/* Shimmer effect */
+.apple-shimmer {
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
+  background-size: 200% 100%;
+  animation: apple-shimmer 1.5s infinite;
+}

@@ -1,0 +1,403 @@
+/* ============================================
+   DESKTOP CONTACT - Apple HIG Premium
+   ============================================ */
+
+.desktop-contact {
+  position: relative;
+  padding: 100px 32px;
+  background: #f5f5f7;
+  overflow: hidden;
+}
+
+.dark .desktop-contact {
+  background: #1c1c1e;
+}
+
+.contact-bg-blur {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(
+    circle,
+    rgba(0, 122, 255, 0.04) 0%,
+    transparent 70%
+  );
+  top: -200px;
+  right: -200px;
+  pointer-events: none;
+}
+
+.contact-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+/* Header */
+.contact-header {
+  text-align: center;
+  margin-bottom: 64px;
+}
+
+.contact-badge {
+  display: inline-block;
+  font-family: -apple-system, "SF Pro Text", system-ui;
+  font-size: 13px;
+  font-weight: 510;
+  color: #007aff;
+  background: rgba(0, 122, 255, 0.1);
+  padding: 5px 14px;
+  border-radius: 980px;
+  margin-bottom: 20px;
+}
+
+.contact-title {
+  font-family: -apple-system, "SF Pro Display", system-ui;
+  font-size: 48px;
+  font-weight: 700;
+  letter-spacing: -0.003em;
+  margin-bottom: 16px;
+  color: #1d1d1f;
+}
+
+.dark .contact-title {
+  color: #f5f5f7;
+}
+
+.title-dot {
+  color: #007aff;
+}
+
+.contact-subtitle {
+  font-family: -apple-system, "SF Pro Text", system-ui;
+  font-size: 18px;
+  color: #6e6e73;
+}
+
+.dark .contact-subtitle {
+  color: #8e8e93;
+}
+
+/* Grid 2 Kolom */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+}
+
+/* ========== LEFT COLUMN - INFO ========== */
+.contact-info-card {
+  background: #ffffff;
+  border-radius: 28px;
+  padding: 40px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+}
+
+.dark .contact-info-card {
+  background: #2c2c2e;
+  box-shadow: none;
+}
+
+.contact-info-title {
+  font-family: -apple-system, "SF Pro Display", system-ui;
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: #1d1d1f;
+}
+
+.dark .contact-info-title {
+  color: #f5f5f7;
+}
+
+.contact-info-description {
+  font-family: -apple-system, "SF Pro Text", system-ui;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #6e6e73;
+  margin-bottom: 32px;
+}
+
+.dark .contact-info-description {
+  color: #8e8e93;
+}
+
+/* Contact Details */
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-bottom: 32px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.dark .contact-details {
+  border-bottom-color: rgba(255, 255, 255, 0.06);
+}
+
+.contact-detail-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.contact-detail-icon {
+  width: 40px;
+  height: 40px;
+  background: rgba(0, 122, 255, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #007aff;
+}
+
+.contact-detail-label {
+  font-family: -apple-system, "SF Pro Text", system-ui;
+  font-size: 12px;
+  font-weight: 500;
+  color: #8e8e93;
+  margin-bottom: 4px;
+}
+
+.contact-detail-value {
+  font-family: -apple-system, "SF Pro Text", system-ui;
+  font-size: 15px;
+  font-weight: 500;
+  color: #1d1d1f;
+  text-decoration: none;
+}
+
+.dark .contact-detail-value {
+  color: #f5f5f7;
+}
+
+.contact-detail-value.available {
+  color: #34c759;
+}
+
+/* Social Links */
+.contact-social-label {
+  font-family: -apple-system, "SF Pro Text", system-ui;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 16px;
+  color: #1d1d1f;
+}
+
+.dark .contact-social-label {
+  color: #f5f5f7;
+}
+
+.contact-social-links {
+  display: flex;
+  gap: 12px;
+}
+
+.contact-social-link {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #1d1d1f;
+  transition: all 0.2s ease;
+}
+
+.dark .contact-social-link {
+  background: rgba(255, 255, 255, 0.08);
+  color: #f5f5f7;
+}
+
+.contact-social-link:hover {
+  transform: translateY(-3px);
+  background: var(--social-color);
+  color: white;
+}
+
+/* ========== RIGHT COLUMN - FORM ========== */
+.contact-form-wrapper {
+  background: #ffffff;
+  border-radius: 28px;
+  padding: 40px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+}
+
+.dark .contact-form-wrapper {
+  background: #2c2c2e;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-family: -apple-system, "SF Pro Text", system-ui;
+  font-size: 14px;
+  font-weight: 500;
+  color: #1d1d1f;
+}
+
+.dark .form-group label {
+  color: #f5f5f7;
+}
+
+.form-group input,
+.form-group textarea {
+  font-family: -apple-system, "SF Pro Text", system-ui;
+  font-size: 15px;
+  padding: 12px 16px;
+  background: #f5f5f7;
+  border: 1px solid transparent;
+  border-radius: 14px;
+  transition: all 0.2s ease;
+  outline: none;
+  color: #1d1d1f;
+}
+
+.dark .form-group input,
+.dark .form-group textarea {
+  background: #1c1c1e;
+  color: #f5f5f7;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #007aff;
+  background: #ffffff;
+}
+
+.dark .form-group input:focus,
+.dark .form-group textarea:focus {
+  background: #2c2c2e;
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+/* Submit Button */
+.contact-submit-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: #007aff;
+  color: white;
+  font-family: -apple-system, "SF Pro Text", system-ui;
+  font-size: 16px;
+  font-weight: 590;
+  padding: 14px 28px;
+  border: none;
+  border-radius: 980px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-top: 8px;
+}
+
+.contact-submit-btn:hover {
+  background: #0066d4;
+  transform: scale(0.98);
+}
+
+.contact-submit-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.btn-loading {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Success Message */
+.form-success {
+  margin-top: 16px;
+  padding: 12px 16px;
+  background: rgba(52, 199, 89, 0.1);
+  border-radius: 14px;
+  color: #34c759;
+  font-family: -apple-system, "SF Pro Text", system-ui;
+  font-size: 14px;
+  text-align: center;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .contact-info-card,
+  .contact-form-wrapper {
+    padding: 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .desktop-contact {
+    display: none;
+  }
+}
+
+/* Status Messages */
+.form-success {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 16px;
+  padding: 12px 16px;
+  border-radius: 14px;
+  font-family: -apple-system, "SF Pro Text", system-ui;
+  font-size: 14px;
+  text-align: center;
+  animation: fadeIn 0.3s ease;
+}
+
+.form-success.success {
+  background: rgba(52, 199, 89, 0.1);
+  color: #34c759;
+}
+
+.form-success.error {
+  background: rgba(255, 59, 48, 0.1);
+  color: #ff3b30;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,209 @@
+/* ============================================
+   DESKTOP EXPERTISE - Apple HIG Premium
+   ============================================ */
+
+.desktop-expertise {
+  position: relative;
+  padding: 100px 32px;
+  background: #f5f5f7;
+  overflow: hidden;
+}
+
+.dark .desktop-expertise {
+  background: #1c1c1e;
+}
+
+.expertise-bg-blur {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(
+    circle,
+    rgba(0, 122, 255, 0.04) 0%,
+    transparent 70%
+  );
+  top: -200px;
+  right: -200px;
+  pointer-events: none;
+}
+
+.expertise-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+/* Header */
+.expertise-header {
+  text-align: center;
+  margin-bottom: 64px;
+}
+
+.expertise-badge {
+  display: inline-block;
+  font-family: -apple-system, "SF Pro Text", system-ui;
+  font-size: 13px;
+  font-weight: 510;
+  color: #007aff;
+  background: rgba(0, 122, 255, 0.1);
+  padding: 5px 14px;
+  border-radius: 980px;
+  margin-bottom: 20px;
+  letter-spacing: -0.2px;
+}
+
+.expertise-title {
+  font-family: -apple-system, "SF Pro Display", system-ui;
+  font-size: 48px;
+  font-weight: 700;
+  letter-spacing: -0.003em;
+  margin-bottom: 16px;
+  color: #1d1d1f;
+}
+
+.dark .expertise-title {
+  color: #f5f5f7;
+}
+
+.title-dot {
+  color: #007aff;
+}
+
+.expertise-subtitle {
+  font-family: -apple-system, "SF Pro Text", system-ui;
+  font-size: 18px;
+  color: #6e6e73;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.dark .expertise-subtitle {
+  color: #8e8e93;
+}
+
+/* Grid */
+.expertise-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+/* Card */
+.expertise-card {
+  position: relative;
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 32px;
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.dark .expertise-card {
+  background: #2c2c2e;
+}
+
+.expertise-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.15);
+}
+
+.card-hover-effect {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 122, 255, 0) 0%,
+    rgba(0, 122, 255, 0.02) 100%
+  );
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+
+.expertise-card:hover .card-hover-effect {
+  opacity: 1;
+}
+
+/* Card Icon */
+.card-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+  box-shadow: 0 8px 16px -6px rgba(0, 0, 0, 0.1);
+}
+
+.card-icon span {
+  font-size: 28px;
+}
+
+/* Card Title */
+.card-title {
+  font-family: -apple-system, "SF Pro Display", system-ui;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #1d1d1f;
+}
+
+.dark .card-title {
+  color: #f5f5f7;
+}
+
+/* Card Description */
+.card-description {
+  font-family: -apple-system, "SF Pro Text", system-ui;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #6e6e73;
+  margin-bottom: 20px;
+}
+
+.dark .card-description {
+  color: #8e8e93;
+}
+
+/* Tech Tags */
+.card-techs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tech-tag {
+  font-family: -apple-system, "SF Pro Text", system-ui;
+  font-size: 12px;
+  font-weight: 470;
+  color: #007aff;
+  background: rgba(0, 122, 255, 0.08);
+  padding: 4px 10px;
+  border-radius: 980px;
+  letter-spacing: -0.2px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .expertise-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .desktop-expertise {
+    display: none;
+  }
+}
+
+/* Icon styling */
+.card-icon svg {
+  transition: transform 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.expertise-card:hover .card-icon svg {
+  transform: scale(1.1);
+}

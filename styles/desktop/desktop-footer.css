@@ -1,0 +1,276 @@
+/* ============================================
+   DESKTOP FOOTER - Apple HIG Premium
+   ============================================ */
+
+.desktop-footer {
+  position: relative;
+  background: #f5f5f7;
+  padding: 60px 32px 32px;
+  margin-top: 60px;
+  overflow: hidden;
+}
+
+.dark .desktop-footer {
+  background: #1c1c1e;
+}
+
+.footer-bg-blur {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(
+    circle,
+    rgba(0, 122, 255, 0.03) 0%,
+    transparent 70%
+  );
+  bottom: -100px;
+  right: -100px;
+  pointer-events: none;
+}
+
+.footer-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+/* ========== MAIN FOOTER ========== */
+.footer-main {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.5fr;
+  gap: 48px;
+  padding-bottom: 48px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.dark .footer-main {
+  border-bottom-color: rgba(255, 255, 255, 0.08);
+}
+
+/* Left Column - Brand */
+.footer-logo {
+  font-family: -apple-system, "SF Pro Display", system-ui;
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: -0.3px;
+  margin-bottom: 12px;
+  background: linear-gradient(135deg, #007aff, #5856d6);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.footer-tagline {
+  font-family: -apple-system, "SF Pro Text", system-ui;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #6e6e73;
+  margin-bottom: 20px;
+}
+
+.dark .footer-tagline {
+  color: #8e8e93;
+}
+
+.footer-social {
+  display: flex;
+  gap: 12px;
+}
+
+.footer-social-link {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #1d1d1f;
+  transition: all 0.2s ease;
+}
+
+.dark .footer-social-link {
+  background: rgba(255, 255, 255, 0.08);
+  color: #f5f5f7;
+}
+
+.footer-social-link:hover {
+  transform: translateY(-2px);
+  background: #007aff;
+  color: white;
+}
+
+/* Middle Columns - Links */
+.footer-links-title {
+  font-family: -apple-system, "SF Pro Text", system-ui;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #8e8e93;
+  margin-bottom: 16px;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-links li a {
+  font-family: -apple-system, "SF Pro Text", system-ui;
+  font-size: 14px;
+  color: #1d1d1f;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.dark .footer-links li a {
+  color: #f5f5f7;
+}
+
+.footer-links li a:hover {
+  color: #007aff;
+}
+
+/* Right Column - Contact */
+.footer-contact-title {
+  font-family: -apple-system, "SF Pro Text", system-ui;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #8e8e93;
+  margin-bottom: 16px;
+}
+
+.footer-contact-email {
+  margin-bottom: 12px;
+}
+
+.footer-contact-email a {
+  font-family: -apple-system, "SF Pro Text", system-ui;
+  font-size: 15px;
+  font-weight: 500;
+  color: #1d1d1f;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.dark .footer-contact-email a {
+  color: #f5f5f7;
+}
+
+.footer-contact-email a:hover {
+  color: #007aff;
+}
+
+.footer-contact-status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: -apple-system, "SF Pro Text", system-ui;
+  font-size: 13px;
+  font-weight: 500;
+  color: #34c759;
+}
+
+.footer-contact-status .status-dot {
+  width: 8px;
+  height: 8px;
+  background: #34c759;
+  border-radius: 50%;
+  animation: footerPulse 1.5s ease infinite;
+}
+
+@keyframes footerPulse {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(0.8);
+  }
+}
+
+/* ========== BOTTOM BAR ========== */
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 32px;
+  font-family: -apple-system, "SF Pro Text", system-ui;
+  font-size: 13px;
+  color: #8e8e93;
+}
+
+.footer-copyright {
+  margin: 0;
+}
+
+.footer-made-with {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin: 0;
+}
+
+.footer-heart {
+  color: #ff3b30;
+  animation: heartbeat 1.5s ease infinite;
+}
+
+@keyframes heartbeat {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+/* Back to Top Button */
+.footer-back-to-top {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: none;
+  border: none;
+  font-family: -apple-system, "SF Pro Text", system-ui;
+  font-size: 13px;
+  font-weight: 500;
+  color: #007aff;
+  cursor: pointer;
+  padding: 8px 12px;
+  border-radius: 980px;
+  transition: all 0.2s ease;
+}
+
+.footer-back-to-top:hover {
+  background: rgba(0, 122, 255, 0.08);
+  transform: translateY(-2px);
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 968px) {
+  .footer-main {
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+  }
+
+  .footer-brand {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 768px) {
+  .desktop-footer {
+    display: none;
+  }
+}

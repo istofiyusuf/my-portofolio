@@ -1,0 +1,149 @@
+/* Apple HIG - Desktop Header */
+.desktop-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  padding: 0 32px;
+  transition: all 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 0.5px solid rgba(0, 0, 0, 0.1);
+}
+
+.dark .desktop-header {
+  background: rgba(0, 0, 0, 0.72);
+  border-bottom: 0.5px solid rgba(255, 255, 255, 0.1);
+}
+
+.desktop-header.scrolled {
+  padding: 8px 32px;
+}
+
+.desktop-header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 52px;
+}
+
+/* Logo styles */
+.desktop-logo {
+  display: flex;
+  align-items: center;
+  transition: opacity 0.2s ease;
+  line-height: 0;
+}
+
+.desktop-logo-img {
+  width: auto;
+  height: 32px;
+  object-fit: contain;
+}
+
+.desktop-logo:hover {
+  opacity: 0.7;
+}
+
+@media (max-width: 768px) {
+  .desktop-logo-img {
+    height: 28px;
+  }
+}
+
+.desktop-nav {
+  display: flex;
+  gap: 32px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.desktop-nav-link {
+  font-family: -apple-system, "SF Pro Text", system-ui;
+  font-size: 14px;
+  font-weight: 400;
+  color: #1d1d1f;
+  transition: color 0.2s ease;
+  letter-spacing: -0.2px;
+}
+
+.dark .desktop-nav-link {
+  color: #f5f5f7;
+}
+
+.desktop-nav-link:hover {
+  color: #007aff;
+}
+
+.desktop-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.desktop-status {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  background: #34c759;
+  border-radius: 50%;
+  box-shadow: 0 0 0 0 #34c759;
+  animation: pulse 2s infinite;
+}
+
+.status-text {
+  font-family: -apple-system, "SF Pro Text", system-ui;
+  font-size: 13px;
+  font-weight: 500;
+  color: #34c759;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(52, 199, 89, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 6px rgba(52, 199, 89, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(52, 199, 89, 0);
+  }
+}
+
+.desktop-hire-btn {
+  font-family: -apple-system, "SF Pro Text", system-ui;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 6px 16px;
+  background: #007aff;
+  color: white;
+  border: none;
+  border-radius: 980px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.desktop-hire-btn:hover {
+  background: #0066d4;
+  transform: scale(0.98);
+}
+
+@media (max-width: 900px) {
+  .desktop-nav {
+    display: none;
+  }
+
+  .desktop-status {
+    display: none;
+  }
+}

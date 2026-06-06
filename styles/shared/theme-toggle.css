@@ -1,0 +1,30 @@
+/* styles/shared/theme-toggle.css - Apple Style Theme Toggle */
+.theme-toggle {
+  position: relative;
+  padding: var(--spacing-xs);
+  background: var(--bg-tertiary);
+  border-radius: var(--radius-full);
+  transition: all var(--transition-base);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.theme-toggle:hover {
+  background: var(--text-quaternary);
+  transform: scale(1.05);
+}
+
+.theme-toggle:active {
+  transform: scale(0.95);
+}
+
+/* Apple Spring animation */
+.theme-toggle svg {
+  transition: transform 0.3s cubic-bezier(0.34, 1.2, 0.64, 1);
+}
+
+.theme-toggle:hover svg {
+  transform: rotate(15deg);
+}

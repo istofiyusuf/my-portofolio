@@ -1,0 +1,229 @@
+/* Apple HIG - Mobile Header */
+.mobile-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 0.5px solid rgba(0, 0, 0, 0.1);
+}
+
+.dark .mobile-header {
+  background: rgba(0, 0, 0, 0.95);
+  border-bottom: 0.5px solid rgba(255, 255, 255, 0.1);
+}
+
+.mobile-header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 20px;
+  height: 52px;
+}
+
+/* Di dalam mobile-header.css, ganti bagian .mobile-logo */
+
+/* Sebelumnya (teks) */
+.mobile-logo {
+  font-family: -apple-system, "SF Pro Text", system-ui;
+  font-size: 18px;
+  font-weight: 590;
+  letter-spacing: -0.3px;
+  background: linear-gradient(135deg, #007aff, #5856d6);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Logo styles */
+.mobile-logo {
+  display: flex;
+  align-items: center;
+  line-height: 0;
+}
+
+.mobile-logo-img {
+  width: auto;
+  height: 28px;
+  object-fit: contain;
+}
+
+/* Logo di drawer mobile */
+.mobile-drawer-logo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 32px;
+  padding-bottom: 20px;
+  border-bottom: 0.5px solid rgba(0, 0, 0, 0.05);
+}
+
+.dark .mobile-drawer-logo {
+  border-bottom-color: rgba(255, 255, 255, 0.05);
+}
+
+.mobile-drawer-logo img {
+  width: auto;
+  height: 40px;
+}
+
+.mobile-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.mobile-status .status-dot {
+  width: 8px;
+  height: 8px;
+  background: #34c759;
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+
+.mobile-menu-btn {
+  background: none;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.mobile-menu-btn span {
+  display: block;
+  width: 20px;
+  height: 1.5px;
+  background: #1d1d1f;
+  transition: all 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+  border-radius: 1px;
+}
+
+.dark .mobile-menu-btn span {
+  background: #f5f5f7;
+}
+
+.mobile-menu-btn.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.mobile-menu-btn.active span:nth-child(2) {
+  opacity: 0;
+  transform: scale(0.3);
+}
+
+.mobile-menu-btn.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+.mobile-menu-drawer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+  border-radius: 20px 20px 0 0;
+  padding: 30px 24px 40px;
+  transform: translateY(100%);
+  transition: transform 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+  z-index: 101;
+}
+
+.dark .mobile-menu-drawer {
+  background: rgba(0, 0, 0, 0.98);
+}
+
+.mobile-menu-drawer.open {
+  transform: translateY(0);
+}
+
+.mobile-nav-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 32px;
+}
+
+.mobile-nav-menu a {
+  font-family: -apple-system, "SF Pro Text", system-ui;
+  font-size: 24px;
+  font-weight: 500;
+  letter-spacing: -0.5px;
+  padding: 12px 0;
+  color: #1d1d1f;
+  text-decoration: none;
+  border-bottom: 0.5px solid rgba(0, 0, 0, 0.05);
+}
+
+.dark .mobile-nav-menu a {
+  color: #f5f5f7;
+  border-bottom-color: rgba(255, 255, 255, 0.05);
+}
+
+.mobile-hire-btn {
+  width: 100%;
+  padding: 14px;
+  background: #007aff;
+  color: white;
+  border: none;
+  border-radius: 980px;
+  font-family: -apple-system, "SF Pro Text", system-ui;
+  font-size: 17px;
+  font-weight: 590;
+  cursor: pointer;
+  margin-bottom: 24px;
+}
+
+.mobile-status-large {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px;
+  font-family: -apple-system, "SF Pro Text", system-ui;
+  font-size: 15px;
+  color: #34c759;
+}
+
+.status-dot-large {
+  width: 10px;
+  height: 10px;
+  background: #34c759;
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+
+.mobile-menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 100;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.mobile-menu-overlay.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(52, 199, 89, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 6px rgba(52, 199, 89, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(52, 199, 89, 0);
+  }
+}
