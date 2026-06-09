@@ -1,14 +1,14 @@
 /* ============================================
    SUPER PREMIUM DESKTOP HERO - Apple HIG
    ============================================ */
-
 .desktop-hero {
   position: relative;
-  min-height: 100vh;
+  min-height: 80vh;
   display: flex;
   align-items: center;
   overflow: hidden;
   background: #ffffff;
+  margin-top: 24px;
 }
 
 .dark .desktop-hero {

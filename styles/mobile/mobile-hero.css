@@ -1,9 +1,8 @@
 /* ============================================
    SUPER PREMIUM MOBILE HERO - Apple HIG
    ============================================ */
-
 .mobile-hero {
-  min-height: 100vh;
+  min-height: 80vh;
   display: flex;
   align-items: center;
   background: #ffffff;
@@ -54,17 +53,17 @@
 /* ========== PHOTO PROFILE ========== */
 .mobile-hero-photo-wrapper {
   position: relative;
-  margin-bottom: 32px;
+  margin-bottom: 24px;
 }
 
 .mobile-photo-ring {
   position: absolute;
-  width: 200px;
-  height: 200px;
+  width: 260px;
+  height: 260px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  border: 1px solid rgba(0, 122, 255, 0.2);
+  border: 1px solid rgba(0, 123, 255, 0.369);
   border-radius: 50%;
   animation: mobileRingPulse 2.5s ease infinite;
 }
@@ -82,8 +81,8 @@
 }
 
 .mobile-photo-container {
-  width: 160px;
-  height: 160px;
+  width: 240px;
+  height: 240px;
   margin: 0 auto;
   border-radius: 50%;
   overflow: hidden;
@@ -102,7 +101,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 20%;
+  object-position: center 50%;
 }
 
 /* ========== BADGE ========== */

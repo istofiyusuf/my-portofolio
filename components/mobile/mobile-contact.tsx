@@ -100,7 +100,7 @@ export default function MobileContact() {
               <Mail size={18} />
               <div>
                 <span>Email</span>
-                <a href="mailto:istofi@yusuf.com">istofi@yusuf.com</a>
+                <a href="mailto:yusufistofi@gmail.com">yusufistofi@gmail.com</a>
               </div>
             </div>
             <div className="mobile-contact-detail">

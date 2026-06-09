@@ -130,10 +130,10 @@ export default function DesktopContact() {
                   <div>
                     <p className="contact-detail-label">Email</p>
                     <a
-                      href="mailto:istofi@yusuf.com"
+                      href="mailto:yusufistofi@gmail.com"
                       className="contact-detail-value"
                     >
-                      istofi@yusuf.com
+                      yusufistofi@gmail.com
                     </a>
                   </div>
                 </div>

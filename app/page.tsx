@@ -12,6 +12,7 @@ import MobileProjects from "@/components/mobile/mobile-projects";
 import DesktopContact from "@/components/desktop/desktop-contact";
 import MobileContact from "@/components/mobile/mobile-contact";
 import DesktopFooter from "@/components/desktop/desktop-footer";
+import MobileFooter from "@/components/mobile/mobile-footer";
 import {
   SkeletonHero,
   SkeletonExpertise,
@@ -57,7 +58,7 @@ export default function Home() {
       </Suspense>
 
       {/* Footer - Desktop only */}
-      {!isMobile && <DesktopFooter />}
+      {isMobile ? <MobileFooter /> : <DesktopFooter />}
     </main>
   );
 }
