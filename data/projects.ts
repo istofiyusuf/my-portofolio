@@ -117,9 +117,15 @@ export const projectsData: Project[] = [
     imageMobile: "/projects/shopverse-mobile.jpg",
     tags: ["E-commerce", "Payment"],
     techs: ["Next.js", "Stripe", "PostgreSQL"],
-    links: [{ url: "#", label: "In Development", isExternal: true }],
+    links: [
+      {
+        url: "https://shopverse-id.vercel.app",
+        label: "Live Demo",
+        isExternal: true,
+      },
+    ],
     features: ["Payment gateway", "Real-time inventory", "Reviews"],
-    status: "coming-soon",
+    status: "live",
     featured: false,
     year: 2025,
     category: "web",
